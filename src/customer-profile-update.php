@@ -1,4 +1,8 @@
-<?php require_once('header.php'); ?>
+<?php 
+ini_set('display_errors', 0);
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+require_once('header.php'); 
+?>
 
 <?php
 // Check if the customer is logged in or not

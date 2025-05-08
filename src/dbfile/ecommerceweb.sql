@@ -349,7 +349,7 @@ CREATE TABLE `tbl_customer` (
   `cust_b_name` varchar(100) NOT NULL,
   `cust_b_cname` varchar(100) NOT NULL,
   `cust_b_phone` varchar(50) NOT NULL,
-  `cust_b_country` int(11) NOT NULL,
+  `cust_b_country` int(11) NULL,
   `cust_b_address` text NOT NULL,
   `cust_b_city` varchar(100) NOT NULL,
   `cust_b_state` varchar(100) NOT NULL,
@@ -357,7 +357,7 @@ CREATE TABLE `tbl_customer` (
   `cust_s_name` varchar(100) NOT NULL,
   `cust_s_cname` varchar(100) NOT NULL,
   `cust_s_phone` varchar(50) NOT NULL,
-  `cust_s_country` int(11) NOT NULL,
+  `cust_s_country` int(11) NULL,
   `cust_s_address` text NOT NULL,
   `cust_s_city` varchar(100) NOT NULL,
   `cust_s_state` varchar(100) NOT NULL,
@@ -1871,6 +1871,18 @@ ALTER TABLE `tbl_video`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_color`

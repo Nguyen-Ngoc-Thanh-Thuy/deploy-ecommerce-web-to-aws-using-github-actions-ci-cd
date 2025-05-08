@@ -1,4 +1,9 @@
-<?php require_once('header.php'); ?>
+<?php 
+ini_set('display_errors', 0);
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+require_once('header.php'); 
+?>
+
 <!-- fetching row banner login -->
 <?php
 $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");

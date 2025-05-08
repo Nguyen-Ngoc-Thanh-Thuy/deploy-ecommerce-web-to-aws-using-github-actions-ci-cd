@@ -6,16 +6,21 @@ ini_set('error_reporting', E_ALL);
 date_default_timezone_set('America/Los_Angeles');
 
 // Host Name
-$dbhost = 'localhost';
+// $dbhost = 'db';
 
 // Database Name
-$dbname = 'ecommerceweb';
+// $dbname = 'ecommerceweb';
 
 // Database Username
-$dbuser = 'root';
+// $dbuser = 'root';
 
 // Database Password
-$dbpass = '';
+// $dbpass = 'passwordpassword';
+
+$dbhost = getenv('DB_HOST');
+$dbname = getenv('DB_NAME');
+$dbuser = getenv('DB_USER');
+$dbpass = getenv('DB_PASSWORD');
 
 // Defining base url
 define("BASE_URL", "");

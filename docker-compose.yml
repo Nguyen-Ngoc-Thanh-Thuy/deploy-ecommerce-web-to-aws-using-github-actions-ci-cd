@@ -1,25 +1,27 @@
 version: '3.8'
 
 services:
-  web:
+  app:
     build: .
     ports:
       - "8080:80"
     volumes:
-      - src/:/var/www/html
+      - ./src:/var/www/html
     depends_on:
       - db
     environment:
       - DB_HOST=db
-      - DB_NAME=ecommerce
+      - DB_NAME=ecommerceweb
       - DB_USER=root
       - DB_PASSWORD=password
 
   db:
     image: mysql:5.7
     restart: always
+    volumes:
+      - ./src/dbfile:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: ecommerce
+      MYSQL_DATABASE: ecommerceweb
     ports:
       - "3306:3306"

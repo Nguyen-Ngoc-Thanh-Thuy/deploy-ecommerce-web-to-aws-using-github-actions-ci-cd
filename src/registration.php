@@ -1,5 +1,8 @@
-<?php ini_set('display_errors', 0); 
-require_once('header.php'); ?>
+<?php 
+ini_set('display_errors', 0);
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+require_once('header.php'); 
+?>
 
 <?php
 $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
@@ -132,6 +135,7 @@ if (isset($_POST['form1'])) {
                                         '',
                                         '',
                                         '',
+                                        null,
                                         '',
                                         '',
                                         '',
@@ -139,8 +143,7 @@ if (isset($_POST['form1'])) {
                                         '',
                                         '',
                                         '',
-                                        '',
-                                        '',
+                                        null,
                                         '',
                                         '',
                                         '',
