@@ -5,6 +5,6 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:us-east-1:ACCOUNT-NUMBER:task-definition/task-blue-green:1"
         LoadBalancerInfo:
-            ContainerName: "blue-green-container"
+            ContainerName: "container-blue-green"
             ContainerPort: 80
         PlatformVersion: "LATEST"
