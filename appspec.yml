@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:ACCOUNT-NUMBER:task-definition/blue-green-task:1"
+        TaskDefinition: "arn:aws:ecs:us-east-1:ACCOUNT-NUMBER:task-definition/task-blue-green:1"
         LoadBalancerInfo:
             ContainerName: "blue-green-container"
             ContainerPort: 80
