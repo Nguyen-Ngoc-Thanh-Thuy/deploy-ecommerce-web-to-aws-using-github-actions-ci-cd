@@ -6,4 +6,15 @@ COPY src/ /var/www/html/
 
 RUN chown -R www-data:www-data /var/www/html
 
+ARG DB_HOST
+ARG DB_NAME
+ARG DB_USER
+ARG DB_PASSWORD
+
+ENV DB_HOST=${DB_HOST}
+ENV DB_NAME=${DB_NAME}
+ENV DB_USER=${DB_USER}
+ENV DB_PASSWORD=${DB_PASSWORD}
+
+RUN ["start-apache"]s
 EXPOSE 80
