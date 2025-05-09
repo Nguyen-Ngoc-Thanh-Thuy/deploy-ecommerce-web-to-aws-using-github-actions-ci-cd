@@ -16,5 +16,5 @@ ENV DB_NAME=${DB_NAME}
 ENV DB_USER=${DB_USER}
 ENV DB_PASSWORD=${DB_PASSWORD}
 
-RUN ["start-apache"]s
+RUN ["start-apache"]
 EXPOSE 80
