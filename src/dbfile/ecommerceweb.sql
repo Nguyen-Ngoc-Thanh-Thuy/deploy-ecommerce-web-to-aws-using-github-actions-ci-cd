@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_color`
 --
 
+USE ecommerceweb;
+
 CREATE TABLE `tbl_color` (
   `color_id` int(11) NOT NULL,
   `color_name` varchar(255) NOT NULL
